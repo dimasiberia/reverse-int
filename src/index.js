@@ -1,8 +1,9 @@
 module.exports = function reverse (n) {
-let size = String(n).replace("-",'').length;
+let str = String(n).replace("-",'');
+let size = str.length;
 let answer = '';
-for(let i = size-1; i<size; i--){
-answer += n[i];
+for(let i = 0; size-1 >= i; size--){
+answer += str[size-1];
 }
-return Number(answer);
+return answer;
 }
